@@ -1,5 +1,5 @@
 ---
-title: "The Impact on Job Interest of Beginner Programmers in the Tech Sector"
+title: "The Impact on Job Interest of Beginner Programmers"
 subtitle: "TBD"
 author: "TBD"
 thanks: "https://github.com/bonjwow/new-coders"
@@ -15,6 +15,10 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
+library(dplyr)
+library(stargazer)
+library(psych)
+library(PerformanceAnalytics)
 ```
 
 # Introduction
@@ -23,6 +27,54 @@ library(tidyverse)
 
 
 # Data
+```{r}
+#### Message ####
+# Show code for reviewers
+#
+# // Variables
+# Y: MoneyForLearning
+# X: Age, CityPopulation, CommuteTime, Income, MonthsProgramming, SchoolDegree
+# c: Gender
+# 
+# // Clean csv
+# https://github.com/bonjwow/new-coders/blob/main/inputs/data/clean_new-coders.csv
+#
+#
+
+#### Get data ####
+dfNewCoders <- 
+  readr::read_csv("../../inputs/data/clean_new-coders.csv")
+
+```
+
+
+```{r}
+#### Descriptive statistics ####
+stargazer::stargazer(data.frame(dfNewCoders), type="text")
+
+```
+
+```{r}
+#### Test internal consistency with Cronbach's alpha ####
+psych::alpha(dfNewCoders)
+```
+
+```{r}
+#### Correlation analysis ####
+
+### Print correlation coefficient
+round(cor(dfNewCoders), 3)
+
+```
+
+
+```{r}
+### Print correlation matrix
+PerformanceAnalytics::chart.Correlation(dfNewCoders, 
+                                        histogram = TRUE, 
+                                        pch = 19)
+```
+
 
 # Model
 
@@ -30,7 +82,7 @@ library(tidyverse)
 
 # Discussion
 ```{r, include=FALSE}
-### TODO's
+#### TODO's ####
 # Write at least 2.5 pages for the Discussion section
 # Weaknesses and next steps
 ```
