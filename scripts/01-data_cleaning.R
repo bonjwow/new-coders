@@ -54,6 +54,10 @@ dfClean <-
                                 "professional degree (MBA, MD, JD, etc.)" = 3,
                                 "Ph.D." = 4,
                                 .default = 999)) %>%
+  ### Relocate columns
+  dplyr::relocate(Gender, .before = Age) %>%
+  dplyr::relocate(MoneyForLearning, .after = SchoolDegree) %>%
+  
   ### Remove empty rows
   mutate_all(~ifelse(. %in% c(999, "N/A", "null", ""), NA, .)) %>%
   na.omit()

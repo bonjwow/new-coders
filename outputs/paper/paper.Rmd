@@ -18,7 +18,11 @@ library(tidyverse)
 library(dplyr)
 library(stargazer)
 library(psych)
+# install.packages("PerformanceAnalytics")
 library(PerformanceAnalytics)
+# install.packages("QuantPsyc")
+library(QuantPsyc)
+library(car)
 ```
 
 # Introduction
@@ -27,6 +31,12 @@ library(PerformanceAnalytics)
 
 
 # Data
+```{r, include=FALSE}
+#### TODO's ####
+# Explain raw data 
+#
+```
+
 ```{r}
 #### Message ####
 # Show code for reviewers
@@ -55,11 +65,6 @@ stargazer::stargazer(data.frame(dfNewCoders), type="text")
 ```
 
 ```{r}
-#### Test internal consistency with Cronbach's alpha ####
-psych::alpha(dfNewCoders)
-```
-
-```{r}
 #### Correlation analysis ####
 
 ### Print correlation coefficient
@@ -77,6 +82,46 @@ PerformanceAnalytics::chart.Correlation(dfNewCoders,
 
 
 # Model
+```{r, include=FALSE}
+#### TODO's ####
+# Write out what each variable is
+# Weaknesses and next steps
+```
+
+
+```{r}
+#### Multiple regression analysis ####
+summary(fit.lm <- lm(formula = 
+                       MoneyForLearning ~ 
+                       Gender +
+                       CityPopulation +
+                       CommuteTime +
+                       Income +
+                       MonthsProgramming +
+                       SchoolDegree, 
+                     data = dfNewCoders))
+```
+```{r}
+#### Beta ####
+QuantPsyc::lm.beta(fit.lm)
+```
+
+
+
+```{r}
+#### Check multicollinearity with Variance Inflation Factor (VIF) & Tolerance ####
+
+### VIF
+car::vif(fit.lm)
+### Tolerance
+1/car::vif(fit.lm)
+```
+
+```{r}
+
+```
+
+
 
 # Results
 
