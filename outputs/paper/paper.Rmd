@@ -18,6 +18,8 @@ library(tidyverse)
 library(dplyr)
 library(stargazer)
 library(psych)
+# install.packages("here")
+library(here)
 # install.packages("PerformanceAnalytics")
 library(PerformanceAnalytics)
 # install.packages("QuantPsyc")
@@ -56,7 +58,7 @@ The paper is organized as follows. The Data section describes features of the or
 
 #### Get data ####
 dfNewCoders <- 
-  readr::read_csv("../../inputs/data/clean_new-coders.csv")
+  readr::read_csv(here::here("inputs/data/clean_new-coders.csv"))
 
 ```
 
