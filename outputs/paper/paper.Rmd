@@ -25,7 +25,44 @@ library(PerformanceAnalytics)
 # install.packages("QuantPsyc")
 library(QuantPsyc)
 library(car)
+library(kableExtra)
 ```
+
+
+```{r, include=FALSE}
+# Source: https://stefaneng.github.io/apa_correlation_table/
+# install.packages("Hmisc")
+library(Hmisc)
+
+apply_if <- function(mat, p, f) {
+  # Fill NA with FALSE
+  p[is.na(p)] <- FALSE
+  mat[p] <- f(mat[p])
+  mat
+}
+
+apaCorr <- function(mat, corrtype = "pearson") {
+  matCorr <- mat
+  if (class(matCorr) != "rcorr") {
+    matCorr <- rcorr(mat, type = corrtype)
+  }
+  # Add one star for each p < 0.05, 0.01, 0.001
+  stars <- apply_if(round(matCorr$r, 2), matCorr$P < 0.05, function(x) paste0(x, "*"))
+  stars <- apply_if(stars, matCorr$P < 0.01, function(x) paste0(x, "*"))
+  stars <- apply_if(stars, matCorr$P < 0.001, function(x) paste0(x, "*"))
+  # Put - on diagonal and blank on upper diagonal
+  stars[upper.tri(stars, diag = T)] <- "-"
+  stars[upper.tri(stars, diag = F)] <- ""
+  n <- length(stars[1,])
+  colnames(stars) <- 1:n
+  # Remove _ and convert to title case
+  row.names(stars) <- tools::toTitleCase(sapply(row.names(stars), gsub, pattern="_", replacement = " "))
+  # Add index number to row names
+  row.names(stars) <- paste(paste0(1:n,"."), row.names(stars))
+  stars
+}
+```
+
 
 # Introduction
 
@@ -41,8 +78,10 @@ The paper is organized as follows. The Data section describes features of the or
 ```{r, include=FALSE}
 #### TODO's ####
 # Explain raw data 
+# Discuss the variables
 #
 ```
+
 
 ```{r}
 #### Message to Reviewers ####
@@ -63,19 +102,32 @@ dfNewCoders <-
 ```
 
 
-```{r}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #### Descriptive statistics ####
-stargazer::stargazer(data.frame(dfNewCoders), type="text")
+stargazer::stargazer(data.frame(dfNewCoders), type = "text")
 
 ```
 
-```{r}
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #### Correlation analysis ####
 
 ### Print correlation coefficient
-round(cor(dfNewCoders), 3)
+tblCorr <-
+  dfNewCoders %>%
+  as.matrix() %>%
+  apaCorr() %>%
+  data.frame() %>%
+  kable(caption = "Correlation matrix for variables",
+        booktabs = TRUE,
+        col.names = c("1", "2", "3", "4", "5", "6","7","8")) %>%
+  footnote(general = "* p < 0.05, ** p < 0.01, *** p < 0.001",
+             general_title = "")
+
+tblCorr
 
 ```
+
 
 
 ```{r}
