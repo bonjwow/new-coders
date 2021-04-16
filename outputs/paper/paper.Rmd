@@ -120,7 +120,7 @@ tblCorr <-
   data.frame() %>%
   kable(caption = "Correlation matrix for variables",
         booktabs = TRUE,
-        col.names = c("1", "2", "3", "4", "5", "6","7","8")) %>%
+        col.names = c("1", "2", "3", "4", "5", "6", "7", "8")) %>%
   footnote(general = "* p < 0.05, ** p < 0.01, *** p < 0.001",
              general_title = "")
 
@@ -146,18 +146,29 @@ PerformanceAnalytics::chart.Correlation(dfNewCoders,
 ```
 
 
-```{r}
+```{r, results='asis'}
 #### Multiple regression analysis ####
-summary(fit.lm <- lm(formula = 
-                       MoneyForLearning ~ 
-                       Gender +
-                       CityPopulation +
-                       CommuteTime +
-                       Income +
-                       MonthsProgramming +
-                       SchoolDegree, 
-                     data = dfNewCoders))
+fit.lm <- lm(formula = 
+               MoneyForLearning ~ 
+               Gender +
+               CityPopulation +
+               CommuteTime +
+               Income +
+               MonthsProgramming +
+               SchoolDegree, 
+               data = dfNewCoders)
+
+
+# summary(fit.lm)
+stargazer::stargazer(fit.lm, 
+          title = "Result of regression model", 
+          header = FALSE,
+          type = "latex")
 ```
+
+
+
+
 ```{r}
 #### Beta ####
 QuantPsyc::lm.beta(fit.lm)
@@ -175,7 +186,7 @@ car::vif(fit.lm)
 ```
 
 ```{r}
-
+# TODO: RMSE
 ```
 
 
