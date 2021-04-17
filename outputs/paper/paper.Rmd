@@ -148,9 +148,29 @@ PerformanceAnalytics::chart.Correlation(dfNewCoders,
 
 ```{r, results='asis'}
 #### Multiple regression analysis ####
-fit.lm <- lm(formula = 
+multiReg1 <- lm(formula = 
+               MoneyForLearning ~ 
+               CityPopulation +
+               CommuteTime +
+               Income +
+               MonthsProgramming +
+               SchoolDegree, 
+               data = dfNewCoders)
+
+multiReg2 <- lm(formula = 
+               MoneyForLearning ~ 
+               Age +
+               CityPopulation +
+               CommuteTime +
+               Income +
+               MonthsProgramming +
+               SchoolDegree, 
+               data = dfNewCoders)
+
+multiReg3 <- lm(formula = 
                MoneyForLearning ~ 
                Gender +
+               Age +
                CityPopulation +
                CommuteTime +
                Income +
@@ -159,8 +179,8 @@ fit.lm <- lm(formula =
                data = dfNewCoders)
 
 
-# summary(fit.lm)
-stargazer::stargazer(fit.lm, 
+# summary(multiReg3)
+stargazer::stargazer(multiReg1, multiReg2, multiReg3, 
           title = "Result of regression model", 
           header = FALSE,
           type = "latex")
@@ -171,7 +191,7 @@ stargazer::stargazer(fit.lm,
 
 ```{r}
 #### Beta ####
-QuantPsyc::lm.beta(fit.lm)
+QuantPsyc::lm.beta(multiReg3)
 ```
 
 
@@ -180,9 +200,9 @@ QuantPsyc::lm.beta(fit.lm)
 #### Check multicollinearity with Variance Inflation Factor (VIF) & Tolerance ####
 
 ### VIF
-car::vif(fit.lm)
+car::vif(multiReg3)
 ### Tolerance
-1/car::vif(fit.lm)
+1/car::vif(multiReg3)
 ```
 
 ```{r}
