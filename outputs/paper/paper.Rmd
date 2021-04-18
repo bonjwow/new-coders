@@ -16,6 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
 library(dplyr)
+library(janitor)
 library(stargazer)
 library(psych)
 # install.packages("here")
@@ -75,32 +76,43 @@ This analysis shows that beginner programmers living in small towns and/or low-i
 The paper is organized as follows. The Data section describes features of the original survey data and how the data is preprocessed. The Model section explains the multiple linear regression model used to assess the association between each factor and educational costs of beginner programmers, and evaluates the model using its residual standard error, multiple R-squared, and F-statistic. The Results section summarises the results of the regression model and model evaluation processes in the Model section. Lastly, the Discussion section discusses the findings and potential limitations of the paper, and suggests directions for future research related to this data.
 
 # Data
-```{r, include=FALSE}
-#### TODO's ####
-# Explain raw data 
-# Discuss the variables
-#
-```
 
-
-```{r}
-#### Message to Reviewers ####
-#
-# Code chunks are visible on the PDF for the review.
-# Any comments or suggestions are welcome to improve this paper :D
-#
-# // Variables
-# Y: MoneyForLearning
-# X: Age, CityPopulation, CommuteTime, Income, MonthsProgramming, SchoolDegree
-# c: Gender
-# 
-
+```{r table1, echo=FALSE, warning=FALSE, message=FALSE}
 #### Get data ####
 dfNewCoders <- 
   readr::read_csv(here::here("inputs/data/clean_new-coders.csv"))
 
 ```
 
+## Description of Dataset
+The original dataset used for this paper is obtained from `freeCodeCamp`’s GitHub page. The format of the dataset is a comma-separated values (CSV) file, which contains 136 columns and 18,175 observations. I selected 8 variables and cleaned the data using the R programming language [@citeR] and the tidyverse package [@cityTidyverse] and the dplyr package [@cityDplyr]. The selected variables are: Age, CityPopulation, CommuteTime, Gender,  Income,  MoneyForLearning,  MonthsProgramming, and SchoolDegree. The CityPopulation is the estimated number of city population of the recipient; the question asked was "About how many people live in your city?”, and there are three options to choose: “less than 100,000”,  "between 100,000 and 1 million", and "more than 1 million". Since these answers were coded as strings, I converted them into numeric variables using the `recode` function of `dplyr` [@cityDplyr]. The answers for CommuteTime and SchoolDegree were also coded as strings in the original dataset, so I applied the same data cleaning process to the variables as I did with CityPopulation. Also, I omitted observations which have a missing value. Table \@ref(tab:tabViewDataset) is a partial view of the cleaned dataset after the preprocessing.
+
+
+```{r tabViewDataset, echo=FALSE, warning=FALSE, message=FALSE}
+#### A partial view of the cleaned dataset ####
+tableCleanedData <-
+  dfNewCoders[1:10,] %>%
+  mutate_all(linebreak) %>%
+  kable(caption = "A partial view of \\\\the cleaned dataset",
+      booktabs = T,
+      escape = F,
+      "latex",
+      col.names = linebreak(c("Gender", 
+                              "Age",
+                              "City\nPopulation",
+                              "Commute\nTime",
+                              "Income",
+                              "Months\nProgramming",
+                              "School\nDegree",
+                              "Money For\nLearning"), align = "c")) %>%
+  kable_classic(full_width = F)
+
+tableCleanedData
+
+```
+
+
+## Methodology and Data Collection
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #### Descriptive statistics ####
