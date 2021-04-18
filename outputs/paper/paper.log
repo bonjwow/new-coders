@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  18 APR 2021 02:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  18 APR 2021 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -781,39 +781,31 @@ the same identifier (name{table.3}) has been already used, duplicate ignored
 l.240 \end{equation}
                      <./paper_files/figure-latex/unnamed-chunk-3-1.pdf>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 306.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 308.
 [4pdfTeX warning (ext4): destination with the same identifier (name{table.4}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.311 \end{Shaded}
-                  ]
-<paper_files/figure-latex/unnamed-chunk-6-1.pdf, id=109, 469.755pt x 325.215pt>
-
-File: paper_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
-<use paper_files/figure-latex/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/unnamed-chunk-6-1.pdf  used o
-n input line 313.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[5 <./paper_files/figure-latex/unnamed-chunk-6-1.pdf>] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 410--412
+l.314 \end{Shaded}
+                  ] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
 []$\T1/lmr/m/n/10 https : / / www . techrepublic . com / article / the -[] econ
 omic -[] outlook -[] is -[] uncertain -[] so -[] more -[] people -[] want -[] t
 o -[] become -[]
  []
 
-[8] (./paper.aux)
+[7] (./paper.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: CF8DF746AF3901F55C5E73AADE9F0F82;1249.
+(rerunfilecheck)             Checksum: A49389608F11063C9313D3BE3D8E37C3;1305.
  ) 
 Here is how much of TeX's memory you used:
- 12398 strings out of 480971
- 182342 string characters out of 5905910
- 518415 words of memory out of 5000000
- 29304 multiletter control sequences out of 15000+600000
+ 12391 strings out of 480971
+ 182062 string characters out of 5905910
+ 518425 words of memory out of 5000000
+ 29299 multiletter control sequences out of 15000+600000
  464793 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,17n,74p,1423b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -838,10 +830,10 @@ eX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users/developer/AppData/Roami
 ng/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/developer/AppD
 ata/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/devel
 oper/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on paper.pdf (8 pages, 3694752 bytes).
+Output written on paper.pdf (7 pages, 3294053 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
- 45 named destinations out of 1000 (max. 500000)
- 99 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

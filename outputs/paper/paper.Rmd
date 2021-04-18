@@ -27,8 +27,6 @@ library(PerformanceAnalytics)
 library(QuantPsyc)
 library(car)
 library(kableExtra)
-# install.packages("forecast")
-library(forecast)
 ```
 
 
@@ -232,20 +230,7 @@ stargazer::stargazer(multiReg1, multiReg2, multiReg3,
           type = "latex")
 ```
 
-## Model validation
-```{r}
-#### Line plot for fitted values
-plot(dfNewCoders$MoneyForLearning)
-lines(multiReg1$fitted.values, col = "red")
-lines(multiReg2$fitted.values, col = "blue")
-lines(multiReg3$fitted.values, col = "green")
-
-```
-
-```{r}
-#### RMSE ####
-forecast::accuracy(multiReg1)
-```
+## Model validation with RMSE
 
 ```{r}
 #### RMSE with custom function ####
@@ -256,7 +241,10 @@ RMSE <- function(error) {
 }
 
 RMSE(multiReg1$residuals)
+RMSE(multiReg2$residuals)
+RMSE(multiReg3$residuals)
 
+# Model3 has the lowest RMSE among the 3 models => Model3 is the best!
 
 ```
 
