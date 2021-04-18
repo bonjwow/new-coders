@@ -27,6 +27,8 @@ library(PerformanceAnalytics)
 library(QuantPsyc)
 library(car)
 library(kableExtra)
+# install.packages("forecast")
+library(forecast)
 ```
 
 
@@ -165,27 +167,27 @@ PerformanceAnalytics::chart.Correlation(dfNewCoders,
 # Weaknesses and next steps
 ```
 
-## Formulae
+## Model formulae
 
 This equation \@ref(eq:linRegModel1) is a model formula for the regression model 1.
 
 \begin{equation}
 (\#eq:linRegModel1)
-Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \epsilon
+MoneyForLearning \sim \beta_0 + \beta_1 \times CityPopulation + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \epsilon
 \end{equation}
 
 This equation \@ref(eq:linRegModel2) is a model formula for the regression model 2.
 
 \begin{equation}
 (\#eq:linRegModel2)
-Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \epsilon
+MoneyForLearning \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \epsilon
 \end{equation}
 
 This equation \@ref(eq:linRegModel3) is a model formula for the regression model 3.
 
 \begin{equation}
 (\#eq:linRegModel3)
-Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \beta_6X_6 + \epsilon
+MoneyForLearning \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \beta_6X_6 + \epsilon
 \end{equation}
 
 
@@ -230,6 +232,35 @@ stargazer::stargazer(multiReg1, multiReg2, multiReg3,
           type = "latex")
 ```
 
+## Model validation
+```{r}
+#### Line plot for fitted values
+plot(dfNewCoders$MoneyForLearning)
+lines(multiReg1$fitted.values, col = "red")
+lines(multiReg2$fitted.values, col = "blue")
+lines(multiReg3$fitted.values, col = "green")
+
+```
+
+```{r}
+#### RMSE ####
+forecast::accuracy(multiReg1)
+```
+
+```{r}
+#### RMSE with custom function ####
+# Source: https://stackoverflow.com/questions/26237688/rmse-root-mean-square-deviation-calculation-in-r
+
+RMSE <- function(error) {
+  sqrt(mean(error^2)) 
+}
+
+RMSE(multiReg1$residuals)
+
+
+```
+
+
 
 
 
@@ -248,11 +279,6 @@ car::vif(multiReg3)
 ### Tolerance
 1/car::vif(multiReg3)
 ```
-
-```{r}
-# TODO: RMSE
-```
-
 
 
 # Results
