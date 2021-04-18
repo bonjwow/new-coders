@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  17 APR 2021 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  18 APR 2021 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -758,63 +758,62 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 {c:/Users/developer/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/p
 dftex.map}]
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 230.
+<paper_files/figure-latex/unnamed-chunk-3-1.pdf, id=66, 469.755pt x 325.215pt>
+File: paper_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
+<use paper_files/figure-latex/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: paper_files/figure-latex/unnamed-chunk-3-1.pdf  used o
+n input line 227.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
 [2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.234 \end{Shaded}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{table.2}) has been already used, duplicate ignored
+l.230 \section{Model}\label{model}}
+                                   pdfTeX warning (ext4): destination with the 
+same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.234 \end{Shaded}
-                  ]
-<paper_files/figure-latex/unnamed-chunk-3-1.pdf, id=72, 469.755pt x 325.215pt>
-File: paper_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
-<use paper_files/figure-latex/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/unnamed-chunk-3-1.pdf  used o
-n input line 236.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[3pdfTeX warning (ext4): destination with the same identifier (name{table.3}) h
+l.230 \section{Model}\label{model}}
+                                   ] [3pdfTeX warning (ext4): destination with 
+the same identifier (name{table.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.240 \end{equation}
+                     <./paper_files/figure-latex/unnamed-chunk-3-1.pdf>]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 303.
+[4pdfTeX warning (ext4): destination with the same identifier (name{table.4}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.281 \end{Shaded}
-                   <./paper_files/figure-latex/unnamed-chunk-3-1.pdf>] [4] [5pd
-fTeX warning (ext4): destination with the same identifier (name{table.4}) has b
-een already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.360 \begin{Shaded}
-                    ] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 402--404
+l.314 \begin{Shaded}
+                    ] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 372--374
 []$\T1/lmr/m/n/10 https : / / www . techrepublic . com / article / the -[] econ
 omic -[] outlook -[] is -[] uncertain -[] so -[] more -[] people -[] want -[] t
 o -[] become -[]
  []
 
-[8] (./paper.aux)
+[7] (./paper.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: E2E1AB3BA214C0A4AA4B8324ED94EADF;977.
+(rerunfilecheck)             Checksum: 6DF968A568847ADF943A152B5F00CD6F;1075.
  ) 
 Here is how much of TeX's memory you used:
- 12378 strings out of 480971
- 181837 string characters out of 5905910
- 519201 words of memory out of 5000000
- 29292 multiletter control sequences out of 15000+600000
+ 12387 strings out of 480971
+ 181966 string characters out of 5905910
+ 518345 words of memory out of 5000000
+ 29297 multiletter control sequences out of 15000+600000
  464793 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,17n,74p,1423b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,17n,74p,1423b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-
-mathit.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvi
-ps/lm/lm-rm.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/en
-c/dvips/lm/lm-mathsy.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist
-/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf
+ec.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
+m/lm-mathsy.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/en
+c/dvips/lm/lm-rm.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fon
+ts/enc/dvips/lm/lm-mathit.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf
 -dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/developer/AppData/Roaming/TinyTeX
 /texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/developer/AppData/Roamin
 g/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/developer/AppDa
@@ -831,10 +830,10 @@ eX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users/developer/AppData/Roami
 ng/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/developer/AppD
 ata/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/devel
 oper/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on paper.pdf (8 pages, 3282763 bytes).
+Output written on paper.pdf (7 pages, 3282627 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 202 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
