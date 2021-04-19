@@ -113,13 +113,12 @@ tabCleanedData
 
 ```
 
-Table \@ref(tab:tabDescrStat) is
 
+Table 2 displays descriptive statistics for the cleaned data after the preprocessing. The total number of observations is 7,022 and the data type for all variables are numeric variables. The median age of the respondents is 30 years and the median income of them is about \$43,000 in U.S. dollars. The average of the respondents has spent about 2 years and about \$1,000 in U.S. dollars learning to code. 
 
 
 ```{r tabDescrStat, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
 #### Descriptive statistics ####
-
 stargazer::stargazer(data.frame(dfNewCoders), 
                      type = "latex", 
                      title = "Descriptive statistics for the cleaned dataset", 
@@ -127,15 +126,14 @@ stargazer::stargazer(data.frame(dfNewCoders),
                      single.row = TRUE)
 
 
-
 ```
 
-## Methodology and Data Collection
+## Correlation Analysis 
+
+I ran a correlation matrix to check correlation coefficients between the variables. To create the correlation matrix, I used a custom function written by Stefan Eng [@citeEng]. His function contains the `Hmisc` package’s `rcorr` function to calculate the correlations with the p-values and display starts based on the significance level of each cell when the value is lower than a specific level [@citeHmisc]. Along with his custom to compute the correlation matrix, I used the `kable` package to print out the result in a table format [@citeKable]. As can be seen in Table \@ref(tab:tabCorrAnalysis), the result of the correlation matrix shows that all independent variables have a positive significant relationship with the dependent variable, MoneyForLearning, except for CommuteTime. This can be interpreted that a commuting time to work does not affect educational expenditure of new coders aside from their post-secondary education cost. 
 
 
-
-
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r tabCorrAnalysis, echo=FALSE, warning=FALSE, message=FALSE}
 #### Correlation analysis ####
 
 ### Print correlation coefficient
