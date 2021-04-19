@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  18 APR 2021 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  18 APR 2021 23:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -814,7 +814,7 @@ new -[] coder -[] survey -[] and -[] help -[] us -[] build -[] a -[] massive -[
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 8EC57AA776ED1B676DB5379D9E65ADD2;1380.
+(rerunfilecheck)             Checksum: 50ECA5701579C448BF9457A80C01261E;1380.
  ) 
 Here is how much of TeX's memory you used:
  12401 strings out of 480971
@@ -845,7 +845,7 @@ eX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users/developer/AppData/Roami
 ng/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/developer/AppD
 ata/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/devel
 oper/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on paper.pdf (8 pages, 3301889 bytes).
+Output written on paper.pdf (8 pages, 3297757 bytes).
 PDF statistics:
  235 PDF objects out of 1000 (max. 8388607)
  206 compressed objects within 3 object streams

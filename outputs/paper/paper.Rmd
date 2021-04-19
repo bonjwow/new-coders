@@ -169,27 +169,27 @@ PerformanceAnalytics::chart.Correlation(dfNewCoders,
 # Weaknesses and next steps
 ```
 
-## Model formulae
+## Model Formulae
 
 This equation \@ref(eq:linRegModel1) is a model formula for the regression model 1.
 
 \begin{equation}
 (\#eq:linRegModel1)
-MoneyForLearning \sim \beta_0 + \beta_1 \times CityPopulation + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \epsilon
+Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \epsilon
 \end{equation}
 
 This equation \@ref(eq:linRegModel2) is a model formula for the regression model 2.
 
 \begin{equation}
 (\#eq:linRegModel2)
-MoneyForLearning \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \epsilon
+Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \epsilon
 \end{equation}
 
 This equation \@ref(eq:linRegModel3) is a model formula for the regression model 3.
 
 \begin{equation}
 (\#eq:linRegModel3)
-MoneyForLearning \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \beta_6X_6 + \epsilon
+Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \beta_6X_6 + \epsilon
 \end{equation}
 
 
