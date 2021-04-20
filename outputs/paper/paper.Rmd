@@ -27,6 +27,8 @@ library(PerformanceAnalytics)
 library(QuantPsyc)
 library(car)
 library(kableExtra)
+# install.packages("forecast")
+library(forecast)
 ```
 
 
@@ -276,24 +278,55 @@ stargazer::stargazer(linReg1, linReg2, linReg3, linReg4,
           column.labels = c("Any", "Small", "Medium", "Large"),
           font.size = "tiny")
 
+
 ```
 
 
 
 ## Model validation with RMSE
 
-```{r}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #### RMSE with custom function ####
+
+# Source: https://medium.com/dev-genius/metrics-for-evaluating-linear-regression-models-36df305510d9
 # Source: https://stackoverflow.com/questions/26237688/rmse-root-mean-square-deviation-calculation-in-r
 
-RMSE <- function(error) {
-  sqrt(mean(error^2)) 
+RSQ <- function(model) {
+  return(summary(model)$r.squared)
 }
 
-RMSE(multiReg1$residuals)
-RMSE(multiReg2$residuals)
-RMSE(multiReg3$residuals)
+MSE <- function(error) {
+  return(mean(error^2))
+}
+    
+RMSE <- function(error) {
+  return(sqrt(mean(error^2))) 
+}
 
+
+vecModel <-
+  c("Model (1)", "Model (2)", "Model (3)")
+
+vecRSQ <- 
+  c(RSQ(multiReg1), RSQ(multiReg2), RSQ(multiReg3))
+
+vecMSE <-
+  c(MSE(multiReg1$residuals), MSE(multiReg2$residuals), MSE(multiReg3$residuals))
+
+vecRMSE <-
+  c(RMSE(multiReg1$residuals), RMSE(multiReg2$residuals), RMSE(multiReg3$residuals))
+
+dfModelValid <-
+  data.frame(vecModel, vecRSQ, vecMSE, vecRMSE) %>%
+  kable(caption = "Model validation",
+        booktabs = TRUE,
+        col.names = c("Model", "R-squared", "MSE", "RMSE")) %>%
+  column_spec(column = 1, width = "4cm") %>%
+  column_spec(column = 2:4, width = "3cm")
+
+dfModelValid
+
+# If R-squared is closer to 0 = Good!
 # Model3 has the lowest RMSE among the 3 models => Model3 is the best!
 
 ```
