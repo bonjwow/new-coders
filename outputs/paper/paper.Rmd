@@ -196,18 +196,17 @@ Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
 #### Multiple regression analysis ####
+
+### Run linear regression models
 multiReg1 <- lm(formula = 
                MoneyForLearning ~ 
-               CityPopulation +
-               # CommuteTime +
-               Income +
-               MonthsProgramming +
-               SchoolDegree, 
+               Income,
                data = dfNewCoders)
 
 multiReg2 <- lm(formula = 
                MoneyForLearning ~ 
-               Age +
+               # Gender +
+               # Age +
                CityPopulation +
                # CommuteTime +
                Income +
@@ -229,10 +228,57 @@ multiReg3 <- lm(formula =
 
 # summary(multiReg3)
 stargazer::stargazer(multiReg1, multiReg2, multiReg3, 
-          title = "Result of regression model", 
+          title = "Predictions of money for learning across experimental conditions", 
           header = FALSE,
           type = "latex")
 ```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+#### Multiple regression analysis (by city population) ####
+dfSmCity <-
+  dfNewCoders %>%
+  filter(CityPopulation == 0)
+
+dfMdCity <-
+  dfNewCoders %>%
+  filter(CityPopulation == 1)
+
+dfLgCity <-
+  dfNewCoders %>%
+  filter(CityPopulation == 2)
+
+
+### Run linear regression models
+linReg1 <- lm(formula = 
+               MoneyForLearning ~ 
+               Income,
+               data = dfNewCoders)
+
+linReg2 <- lm(formula = 
+               MoneyForLearning ~ 
+               Income,
+               data = dfSmCity)
+
+linReg3 <- lm(formula = 
+               MoneyForLearning ~ 
+               Income,
+               data = dfMdCity)
+
+linReg4 <- lm(formula = 
+               MoneyForLearning ~ 
+               Income,
+               data = dfLgCity)
+
+stargazer::stargazer(linReg1, linReg2, linReg3, linReg4,
+          title = "Predictions of money for learning by city population", 
+          header = FALSE,
+          type = "latex",
+          column.labels = c("Any", "Small", "Medium", "Large"),
+          font.size = "tiny")
+
+```
+
+
 
 ## Model validation with RMSE
 

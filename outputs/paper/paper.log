@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  18 APR 2021 23:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  19 APR 2021 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -607,6 +607,9 @@ File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `' multiply defined.
 
+
+LaTeX Warning: Label `' multiply defined.
+
 )
 \openout1 = `paper.aux'.
 
@@ -782,28 +785,33 @@ same identifier (name{table.3}) has been already used, duplicate ignored
 l.239 \section{Model}\label{model}}
                                    ]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 317.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 348.
 [4 <./paper_files/figure-latex/unnamed-chunk-2-1.pdf>] [5pdfTeX warning (ext4):
  destination with the same identifier (name{table.4}) has been already used, du
 plicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.323 \end{Shaded}
+l.354 \end{Shaded}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.354 \end{Shaded}
                   ] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 427--429
+Underfull \hbox (badness 10000) in paragraph at lines 458--460
 []$\T1/lmr/m/n/10 https : / / www . techrepublic . com / article / the -[] econ
 omic -[] outlook -[] is -[] uncertain -[] so -[] more -[] people -[] want -[] t
 o -[] become -[]
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 430--432
+Underfull \hbox (badness 1546) in paragraph at lines 461--463
 [][]\T1/lmr/m/n/10 Larson, Quincy. 2017. \T1/lmr/m/it/10 We're Build-ing a Mas-
 sive Pub-lic Dataset About New Coders\T1/lmr/m/n/10 . []$https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--432
+Underfull \hbox (badness 10000) in paragraph at lines 461--463
 \T1/lmr/m/n/10 / / www . freecodecamp . org / news / take -[] the -[] 2017 -[] 
 new -[] coder -[] survey -[] and -[] help -[] us -[] build -[] a -[] massive -[
 ] public -[]
@@ -817,38 +825,43 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 50ECA5701579C448BF9457A80C01261E;1380.
  ) 
 Here is how much of TeX's memory you used:
- 12401 strings out of 480971
- 182176 string characters out of 5905910
- 515458 words of memory out of 5000000
- 29301 multiletter control sequences out of 15000+600000
- 464793 words of font info for 79 fonts, out of 8000000 for 9000
+ 12406 strings out of 480971
+ 182223 string characters out of 5905910
+ 517484 words of memory out of 5000000
+ 29303 multiletter control sequences out of 15000+600000
+ 472042 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,17n,74p,1368b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-
 ec.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
-m/lm-mathsy.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/en
+m/lm-mathit.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/en
 c/dvips/lm/lm-rm.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fon
-ts/enc/dvips/lm/lm-mathit.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf
+ts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf
 -dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/developer/AppData/Roaming/TinyTeX
 /texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/developer/AppData/Roamin
 g/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/developer/AppDa
-ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/develop
-er/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users
-/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><
+ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb><c:/Users/develop
+er/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users
+/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><
 c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr
-6.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public
-/lm/lmr7.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
-/public/lm/lmr8.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/font
-s/type1/public/lm/lmri10.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-
-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/developer/AppData/Roaming/TinyT
-eX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users/developer/AppData/Roami
-ng/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/developer/AppD
-ata/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/devel
-oper/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on paper.pdf (8 pages, 3297757 bytes).
+17.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmr5.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type
+1/public/lm/lmr6.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fon
+ts/type1/public/lm/lmr7.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-d
+ist/fonts/type1/public/lm/lmr8.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/
+texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/developer/AppData/Roaming
+/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb><c:/Users/developer/AppData
+/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/develope
+r/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5.pfb><c:/Users/
+developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c
+:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk
+10.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmtt10.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
+pe1/public/lm/lmtti10.pfb>
+Output written on paper.pdf (8 pages, 3346094 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
  102 words of extra memory for PDF output out of 10000 (max. 10000000)
 
