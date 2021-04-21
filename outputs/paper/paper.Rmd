@@ -162,6 +162,9 @@ tblCorr <-
 
 tblCorr
 
+
+# No correlation coefficient > 0.9 
+# No multicollinearity
 ```
 
 
@@ -391,6 +394,8 @@ dfModelValidCity
 
 ```{r}
 #### Beta ####
+# TODO: create a bar plot to show which variable affects the most 
+QuantPsyc::lm.beta(multiReg2)
 QuantPsyc::lm.beta(multiReg3)
 ```
 
@@ -400,8 +405,12 @@ QuantPsyc::lm.beta(multiReg3)
 #### Check multicollinearity with Variance Inflation Factor (VIF) & Tolerance ####
 
 ### VIF
+car::vif(multiReg2)
 car::vif(multiReg3)
+
+
 ### Tolerance
+1/car::vif(multiReg2)
 1/car::vif(multiReg3)
 ```
 
