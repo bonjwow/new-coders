@@ -183,27 +183,33 @@ PerformanceAnalytics::chart.Correlation(dfNewCoders,
 
 ## Model Formulae
 
-This equation \@ref(eq:linRegModel1) is a model formula for the regression model 1.
+This equation \@ref(eq:linRegModel1) is a model formula for Model (1).
 
 \begin{equation}
 (\#eq:linRegModel1)
-Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \epsilon
+Y \sim \beta_0 + \beta_1X_1 + \epsilon
 \end{equation}
 
-This equation \@ref(eq:linRegModel2) is a model formula for the regression model 2.
+This equation \@ref(eq:linRegModel2) is a model formula for Model (2).
 
 \begin{equation}
 (\#eq:linRegModel2)
-Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \epsilon
+Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \epsilon
 \end{equation}
 
-This equation \@ref(eq:linRegModel3) is a model formula for the regression model 3.
+This equation \@ref(eq:linRegModel3) is a model formula for Model (3).
 
 \begin{equation}
 (\#eq:linRegModel3)
 Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \beta_6X_6 + \epsilon
 \end{equation}
 
+This equation \@ref(eq:linRegModel4567) is a model formula for Model (4), (5), (6) and (7).
+
+\begin{equation}
+(\#eq:linRegModel4567)
+Y \sim \beta_0 + \beta_1X_1 + \epsilon
+\end{equation}
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
