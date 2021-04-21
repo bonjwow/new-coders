@@ -33,6 +33,16 @@ library(forecast)
 
 
 ```{r, include=FALSE}
+#### Custom functions ####
+
+### Format number
+# Source: https://stackoverflow.com/questions/29465941/format-number-in-r-with-both-comma-thousands-separator-and-specified-decimals
+
+formatNumber <- function(numb, decimal) {
+  return(format(round(as.numeric(numb), decimal), nsmall=decimal, big.mark=",")) 
+}
+
+### APA style correlation matrix 
 # Source: https://stefaneng.github.io/apa_correlation_table/
 # install.packages("Hmisc")
 library(Hmisc)
@@ -230,7 +240,7 @@ multiReg3 <- lm(formula =
 
 # summary(multiReg3)
 stargazer::stargazer(multiReg1, multiReg2, multiReg3, 
-          title = "Predictions of money for learning across experimental conditions", 
+          title = "Predictions of money for learning", 
           header = FALSE,
           type = "latex")
 ```
@@ -285,25 +295,36 @@ stargazer::stargazer(linReg1, linReg2, linReg3, linReg4,
 
 ## Model Validation
 
+Discuss model validation here...
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #### RMSE with custom function ####
 
 # Source: https://medium.com/dev-genius/metrics-for-evaluating-linear-regression-models-36df305510d9
 # Source: https://stackoverflow.com/questions/26237688/rmse-root-mean-square-deviation-calculation-in-r
 
+### Define functions for R-squared, MSE, and RMSE
 RSQ <- function(model) {
-  return(summary(model)$r.squared)
+  result <- summary(model)$r.squared
+  return(formatNumber(result, 3))
 }
 
 MSE <- function(error) {
-  return(mean(error^2))
+  result <- mean(error^2)
+  return(formatNumber(result, 3))  
 }
     
 RMSE <- function(error) {
-  return(sqrt(mean(error^2))) 
+  result <- sqrt(mean(error^2))
+  return(formatNumber(result, 3)) 
 }
 
+```
 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+### Calculate R-squared, MSE, and RMSE for each model 
 vecModel <-
   c("Model (1)", "Model (2)", "Model (3)")
 
@@ -316,9 +337,10 @@ vecMSE <-
 vecRMSE <-
   c(RMSE(multiReg1$residuals), RMSE(multiReg2$residuals), RMSE(multiReg3$residuals))
 
+### Display the result in a table
 dfModelValid <-
   data.frame(vecModel, vecRSQ, vecMSE, vecRMSE) %>%
-  kable(caption = "Model validation",
+  kable(caption = "Results of model validation metrics",
         booktabs = TRUE,
         col.names = c("Model", "R-squared", "MSE", "RMSE")) %>%
   column_spec(column = 1, width = "4cm") %>%
@@ -328,12 +350,35 @@ dfModelValid
 
 # If R-squared is closer to 0 = Good!
 # Model3 has the lowest RMSE among the 3 models => Model3 is the best!
-
 ```
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
+### Calculate R-squared, MSE, and RMSE for each model
+vecModel_city <-
+  c("Model (1)", "Model (2)", "Model (3)", "Model (4)")
 
+vecRSQ_city <- 
+  c(RSQ(linReg1), RSQ(linReg2), RSQ(linReg3), RSQ(linReg4))
 
+vecMSE_city <-
+  c(MSE(linReg1$residuals), MSE(linReg2$residuals), MSE(linReg3$residuals),  MSE(linReg4$residuals))
+
+vecRMSE_city <-
+  c(RMSE(linReg1$residuals), RMSE(linReg2$residuals), RMSE(linReg3$residuals), RMSE(linReg4$residuals))
+
+### Display the result in a table
+dfModelValidCity <-
+  data.frame(vecModel_city, vecRSQ_city, vecMSE_city, vecRMSE_city) %>%
+  kable(caption = "Results of model validation metrics",
+        booktabs = TRUE,
+        col.names = c("Model", "R-squared", "MSE", "RMSE")) %>%
+  column_spec(column = 1, width = "4cm") %>%
+  column_spec(column = 2:4, width = "3cm")
+
+dfModelValidCity
+
+```
 
 ```{r}
 #### Beta ####
