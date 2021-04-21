@@ -242,7 +242,9 @@ multiReg3 <- lm(formula =
 stargazer::stargazer(multiReg1, multiReg2, multiReg3, 
           title = "Predictions of money for learning", 
           header = FALSE,
-          type = "latex")
+          type = "latex",
+          column.labels = c("Model (1)", "Model (2)", "Model (3)"),
+          model.numbers = FALSE)
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
@@ -285,7 +287,8 @@ stargazer::stargazer(linReg1, linReg2, linReg3, linReg4,
           title = "Predictions of money for learning by city population", 
           header = FALSE,
           type = "latex",
-          column.labels = c("Any", "Small", "Medium", "Large"),
+          column.labels = c("Model (4): Any", "Model (5): Small", "Model (6): Medium", "Model (7): Large"),
+          model.numbers = FALSE,
           font.size = "tiny")
 
 
