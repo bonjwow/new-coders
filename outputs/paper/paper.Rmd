@@ -352,7 +352,7 @@ vecRMSE <-
 ### Display the result in a table
 dfModelValid <-
   data.frame(vecModel, vecRSQ, vecMSE, vecRMSE) %>%
-  kable(caption = "Results of model validation metrics",
+  kable(caption = "Results of model validation metrics for model group 1",
         booktabs = TRUE,
         col.names = c("Model", "R-squared", "MSE", "RMSE")) %>%
   column_spec(column = 1, width = "4cm") %>%
@@ -368,7 +368,7 @@ dfModelValid
 
 ### Calculate R-squared, MSE, and RMSE for each model
 vecModel_city <-
-  c("Model (1)", "Model (2)", "Model (3)", "Model (4)")
+  c("Model (4)", "Model (5)", "Model (6)", "Model (7)")
 
 vecRSQ_city <- 
   c(RSQ(linReg1), RSQ(linReg2), RSQ(linReg3), RSQ(linReg4))
@@ -382,7 +382,7 @@ vecRMSE_city <-
 ### Display the result in a table
 dfModelValidCity <-
   data.frame(vecModel_city, vecRSQ_city, vecMSE_city, vecRMSE_city) %>%
-  kable(caption = "Results of model validation metrics",
+  kable(caption = "Results of model validation metrics for model group 2",
         booktabs = TRUE,
         col.names = c("Model", "R-squared", "MSE", "RMSE")) %>%
   column_spec(column = 1, width = "4cm") %>%

@@ -44,15 +44,15 @@ dfClean <-
                                 .default = 999)) %>%
   mutate(SchoolDegree = dplyr::recode(SchoolDegree,
                                 "no high school (secondary school)" = 0,
-                                "some high school" = 0,
-                                "high school diploma or equivalent (GED)" = 0,
-                                "trade, technical, or vocational training" = 0,
-                                "some college credit, no degree" = 1,
-                                "associate's degree" = 1,
-                                "bachelor's degree" = 2,
-                                "master's degree (non-professional)" = 3,
-                                "professional degree (MBA, MD, JD, etc.)" = 3,
-                                "Ph.D." = 4,
+                                "some high school" = 1,
+                                "high school diploma or equivalent (GED)" = 2,
+                                "trade, technical, or vocational training" = 2,
+                                "some college credit, no degree" = 3,
+                                "associate's degree" = 4,
+                                "bachelor's degree" = 5,
+                                "master's degree (non-professional)" = 6,
+                                "professional degree (MBA, MD, JD, etc.)" = 6,
+                                "Ph.D." = 7,
                                 .default = 999)) %>%
   ### Relocate columns
   dplyr::relocate(Gender, .before = Age) %>%
