@@ -392,30 +392,57 @@ dfModelValidCity
 
 ```
 
-```{r}
-#### Beta ####
-# TODO: create a bar plot to show which variable affects the most 
-QuantPsyc::lm.beta(multiReg2)
-QuantPsyc::lm.beta(multiReg3)
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#### Multicollinearity diagnostics ####
+# Check multicollinearity with Variance Inflation Factor (VIF) & Tolerance
+
+multicolDiagno <- function(mode, title) {
+  betaModel2 <- QuantPsyc::lm.beta(mode)
+  vifModel2 <- car::vif(mode)
+  tolModel2 <- 1/car::vif(mode)
+  
+  dfMulticol <-
+    betaModel2 %>%
+    rbind(formatNumber(unname(betaModel2), 3)) %>%
+    rbind(formatNumber(unname(vifModel2), 3)) %>%
+    rbind(formatNumber(unname(unname(tolModel2)), 3)) %>%
+    cbind(c("B", "Beta", "VIF", "Tolerance"))
+    # dplyr::relocate(Metric, .before = CityPopulation) %>%
+    # dplyr::select(Metric, everything()) %>%
+    # kable()
+  
+  ### Relocate 'Metric' column: alternative to 'dplyr::relocate()'
+  dfMulticol <- dfMulticol[-1,]
+  dfMulticol <- dfMulticol[,c(ncol(dfMulticol),1:ncol(dfMulticol)-1)]
+  
+  kable(dfMulticol, 
+        caption = title,
+        booktabs = TRUE)
+}
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#### Multicollinearity diagnostics for Model (2) ####
+multicolDiagno(multiReg2, "Results of multicollinearity diagnostic metrics for Model (2)")
 ```
 
 
-
-```{r}
-#### Check multicollinearity with Variance Inflation Factor (VIF) & Tolerance ####
-
-### VIF
-car::vif(multiReg2)
-car::vif(multiReg3)
-
-
-### Tolerance
-1/car::vif(multiReg2)
-1/car::vif(multiReg3)
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#### Multicollinearity diagnostics for Model (3) ####
+multicolDiagno(multiReg3, "Results of multicollinearity diagnostic metrics for Model (3)")
 ```
+
 
 
 # Results
+```{r, include=FALSE}
+#### Beta ####
+# TODO: create a bar plot to show which variable affects the most with Beta
+```
+
+
+
 
 # Discussion
 ```{r, include=FALSE}
