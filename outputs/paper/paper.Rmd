@@ -293,7 +293,18 @@ stargazer::stargazer(linReg1, linReg2, linReg3, linReg4,
 
 ## Model Validation
 
-Discuss model validation here...
+I will use Mean Square Error (MSE) and Root Mean Square Error (RMSE) to evaluate the accuracy of the model. As the name implies, MSE is defined as the mean of the square of the residuals obtained from a regression model, and RMSE is the square root of MSE [@citeHolmes]. I will use the residuals which are the results of the `lm` function to calculate MSE and RMSE of the models. Firstly, I will calculate the square of the residuals, and then computed the mean of the squared value for MSE (see Equation \@ref(eq:mse)). Secondly, for RMSE, I will use the `sqrt` function to calculate the square root of MSE (see Equation \@ref(eq:rmse)). Once I obtain the results of MSE and RMSE, I will compare them to see how accurately the models predict the response.
+
+\begin{equation}
+(\#eq:mse)
+MSE = \frac{1}{N}\sum_{i=1}^{N} (residuals_{i})^2
+\end{equation}
+
+\begin{equation}
+(\#eq:rmse)
+RMSE = \sqrt{\frac{1}{N}\sum_{i=1}^{N} (residuals_{i})^2}
+\end{equation}
+
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #### RMSE with custom function ####
