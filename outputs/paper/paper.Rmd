@@ -177,10 +177,8 @@ tblCorr
 
 ## Model Formulae
 
-In the earlier section, I ran a correlation matrix to identify the correlation of each variable and the significance of the relationship between the dependent variable (MoneyForLearning) and other dependents variables. But, I was not able to estimate how much the independent variables impact the dependent variable from the correlation analysis. In this section, I will examine effects of the dependent variables on the dependent variable, focusing on one of the dependent variables: Income. The two main questions that I set out to answer in this section are: (1) How do beginner programmers' income affect the cost of their education to learn code? and (2) Will the effects change according to the population of the city where they live in. To obtain the answer for the first question, I used a simple linear regression model (Model 1) and multiple linear regression models (Model 2 and 3). All these three models use MoneyForLearning (the cost of their education to learn code) as a dependent variable. Model 1 contains only one independent variable, which is Income (see Model \@ref(eq:linRegModel1)); otherwise, Model 3 uses all the independent options except for CommuteTime: Gender, Age, CityPopulation, Income, MonthsProgramming, and SchoolDegree (see Model \@ref(eq:linRegModel3)). And, Model 2 uses the same independent variables, excluding Gender and Age. For the second question about the effects of the population of the city where the programmers reside, I used four simple linear regression models (see \@ref(eq:linRegModel2)). Like Model 1, all these models use MoneyForLearning as a dependent variable and Income as an independent variable (see Model \@ref(eq:linRegModel1)). But, the observations were grouped by the population size of the programmers. Model 4 contains any size of population; and Model 5,6, and 7 are the small (less than 100,000), medium (between 100,000 and 1 million), and large (more than 1 million) size population.
+In the earlier section, I ran a correlation matrix to identify the correlation of each variable and the significance of the relationship between the dependent variable (MoneyForLearning) and other dependents variables. But, I was not able to estimate how much the independent variables impact the dependent variable from the correlation analysis. In this section, I will examine effects of the dependent variables on the dependent variable, focusing on one of the dependent variables: Income. The two main questions that I set out to answer in this section are: (1) How do beginner programmers' income affect the cost of their education to learn code? and (2) Will the effects change according to the population of the city where they live in. To obtain the answer for the first question, I used a simple linear regression model (Equation \@ref(eq:linRegModel1)) and multiple linear regression models (Equation \@ref(eq:linRegModel2) and \@ref(eq:linRegModel3)). All these three models use MoneyForLearning (the cost of their education to learn code) as a dependent variable. Model 1 contains only one independent variable, which is Income (see Equation \@ref(eq:linRegModel1)); otherwise, Model 3 uses all the independent options except for CommuteTime: Gender, Age, CityPopulation, Income, MonthsProgramming, and SchoolDegree (see Equation \@ref(eq:linRegModel3)). As mentioned in the Correlation Analysis section, the CommuteTime (a commuting time) variable does not significantly affect the response variable, so it is excluded from the regression models. And, Model 2 uses the same independent variables, excluding Gender and Age. For the second question about the effects of the population of the city where the programmers reside, I used four simple linear regression models (see Equation \@ref(eq:linRegModel2)). Like Model 1, all these models use MoneyForLearning as a dependent variable and Income as an independent variable (see Equation \@ref(eq:linRegModel1)). But, the observations were grouped by the population size of the programmers. Model 4 contains any size of population; and Model 5,6, and 7 are the small (less than 100,000), medium (between 100,000 and 1 million), and large (more than 1 million) size population.
 
-
- 
  
 \begin{equation}
 (\#eq:linRegModel1)
@@ -196,6 +194,8 @@ Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \epsilon
 (\#eq:linRegModel3)
 Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 + \beta_6X_6 + \epsilon
 \end{equation}
+
+## Data Preprocessing
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
@@ -438,6 +438,68 @@ multicolDiagno(multiReg3, "Results of multicollinearity diagnostic metrics for M
 \newpage
 
 # Appendix {-}
+## Survey questions {-}
+
+Q. [Age] How old are you?
+
+* Type: integer
+
+Q. [CityPopulation] About how many people live in your city?
+
+* Type: string
+
+* Options:
+  1. less than 100,000
+  2. between 100,000 and 1 million
+  3. more than 1 million
+
+Q. [CommuteTime] About how many minutes does it take you to get to work each day?
+
+* Type: string
+
+* Options:
+  1. I work from home
+  2. Less than 15 minutes
+  3. 15 to 29 minutes
+  4. 30 to 44 minutes
+  5. 45 to 60 minutes
+  6. More than 60 minutes
+
+Q. [Gender] What's your gender?
+
+* Type: string
+
+* Options:
+  1. male
+  2. female
+
+Q. [Income] About how much money did you make last year, in US dollars?
+
+* Type: integer
+
+Q. [MoneyForLearning] Aside from university tuition, about how much money have you spent on learning to code so far, in US dollars?
+
+* Type: integer
+
+Q. [MonthsProgramming] About how many months have you been programming for?
+
+* Type: integer
+
+Q. [SchoolDegree] What's the highest degree or level of school you have completed?
+
+* Type: string
+
+* Options:
+  1. no high school (secondary school)
+  2. some high school
+  3. high school diploma or equivalent (GED)
+  4. trade, technical, or vocational training
+  5. some college credit, no degree
+  6. associate's degree
+  7. bachelor's degree
+  8. master's degree (non-professional)
+  9. professional degree (MBA, MD, JD, etc.)
+  10. Ph.D.
 
 \newpage
 

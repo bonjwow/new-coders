@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  23 APR 2021 21:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  24 APR 2021 01:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -761,73 +761,73 @@ l.203
 {table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.365 \newpage
+l.368 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.365 \newpage
+l.368 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.365 \newpage
+l.368 \newpage
               ] [6pdfTeX warning (ext4): destination with the same identifier (
 name{table.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.371 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{table.8}) has been already used, duplicate ignored
+l.429   \end{enumerate}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{table.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.371 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{table.9}) has been already used, duplicate ignored
+l.429   \end{enumerate}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{table.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.371 \newpage
-              ]
-Underfull \hbox (badness 10000) in paragraph at lines 387--389
+l.429   \end{enumerate}
+                       ] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 524--526
 []$\T1/lmr/m/n/10 https : / / www . techrepublic . com / article / the -[] econ
 omic -[] outlook -[] is -[] uncertain -[] so -[] more -[] people -[] want -[] t
 o -[] become -[]
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 390--392
+Underfull \hbox (badness 1546) in paragraph at lines 527--529
 [][]\T1/lmr/m/n/10 Larson, Quincy. 2017. \T1/lmr/m/it/10 We're Build-ing a Mas-
 sive Pub-lic Dataset About New Coders\T1/lmr/m/n/10 . []$https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--392
+Underfull \hbox (badness 10000) in paragraph at lines 527--529
 \T1/lmr/m/n/10 / / www . freecodecamp . org / news / take -[] the -[] 2017 -[] 
 new -[] coder -[] survey -[] and -[] help -[] us -[] build -[] a -[] massive -[
 ] public -[]
  []
 
-[7] (./paper.aux)
+[8] (./paper.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: CB7FD4F74326BA784D84AF5CE031B5CD;1324.
+(rerunfilecheck)             Checksum: 2BA7565C6F0315826585FF30B630145C;1613.
  ) 
 Here is how much of TeX's memory you used:
- 11943 strings out of 480971
- 174903 string characters out of 5905910
- 515585 words of memory out of 5000000
- 28849 multiletter control sequences out of 15000+600000
- 471405 words of font info for 79 fonts, out of 8000000 for 9000
+ 11976 strings out of 480971
+ 175207 string characters out of 5905910
+ 515676 words of memory out of 5000000
+ 28855 multiletter control sequences out of 15000+600000
+ 471770 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,17n,74p,1992b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,17n,74p,2275b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-
-mathit.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvi
-ps/lm/lm-rm.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/en
-c/dvips/lm/lm-mathsy.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist
-/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf
--dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/developer/AppData/Roaming/TinyTeX
+ts1.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/
+lm/lm-mathit.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/e
+nc/dvips/lm/lm-rm.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fo
+nts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texm
+f-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/developer/AppData/Roaming/TinyTeX
 /texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/developer/AppData/Roamin
 g/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/developer/AppDa
 ta/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb><c:/Users/develop
@@ -846,10 +846,10 @@ r/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5.pfb><c:/Users/
 developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c
 :/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt
 10.pfb>
-Output written on paper.pdf (7 pages, 299793 bytes).
+Output written on paper.pdf (8 pages, 303564 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
