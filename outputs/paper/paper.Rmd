@@ -297,13 +297,23 @@ I will use Mean Square Error (MSE) and Root Mean Square Error (RMSE) to evaluate
 
 \begin{equation}
 (\#eq:mse)
-MSE = \frac{1}{N}\sum_{i=1}^{N} (residuals_{i})^2
+MSE = \frac{1}{N}\sum_{i=1}^{N} (residual_{i})^2
 \end{equation}
 
 \begin{equation}
 (\#eq:rmse)
-RMSE = \sqrt{\frac{1}{N}\sum_{i=1}^{N} (residuals_{i})^2}
+RMSE = \sqrt{\frac{1}{N}\sum_{i=1}^{N} (residual_{i})^2}
 \end{equation}
+
+Since two multiple linear regression models (Model 2 and 3) are used in the first group of regression models, I will check if multicollinearity exists in these regression models, using variance inflation factor (VIF) and tolerance. I will use the `car` package to calculate the value of VIF and tolerance for each model [@citeCar]. Also, I will identify how much each of the independent variables affects the dependent variable with the standardized regression coefficients (beta). the `QuantPsyc` package will be used to compute the beta value [@citeQuanPsy].
+
+# Results
+```{r, include=FALSE}
+#### Beta ####
+# TODO: create a bar plot to show which variable affects the most with Beta
+```
+
+
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -429,16 +439,6 @@ multicolDiagno(multiReg2, "Results of multicollinearity diagnostic metrics for M
 #### Multicollinearity diagnostics for Model (3) ####
 multicolDiagno(multiReg3, "Results of multicollinearity diagnostic metrics for Model (3)")
 ```
-
-
-
-# Results
-```{r, include=FALSE}
-#### Beta ####
-# TODO: create a bar plot to show which variable affects the most with Beta
-```
-
-
 
 
 # Discussion
