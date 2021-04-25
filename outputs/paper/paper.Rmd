@@ -266,6 +266,14 @@ stargazer::stargazer(multiReg1, multiReg2, multiReg3,
 
 The second group of regression models to examine the effects of the population of the city where the programmers reside shows that all the models have statistically significant p-values of F-statistic except for Model 5, the model for the small city with less than 100,000 residents (see Table 5). In other words, beginner programmers' income affects the cost of their education to learn code; however, their income does not affect the cost when the model contains only observations from the small city.
 
+## Results of Model Validation
+
+Table \@ref(tab:tab6) is the results of MSE and RMSE of the first group consisting of Model 1, 2, and 3. Among these three models, Model 3 containing all independent variable options has the lowest value of RMSE. So, it can be said that Model 3 predicts the response variable more accurately with holding all independent variables, compared to Model 1 and 2 which contains the Income variable or excludes the Age and Gender variables.
+
+Table \@ref(tab:tab7) is the results of MSE and RMSE of the second group consisting of Model 4, 5, 6, and 7. Among these four models, Model 5 (the regression model for the small city) has the lowest MSE and RMSE. However, as explained earlier, the p-values of F-statistic for the model was higher than a significance level of 0.05, which means the model is not statistically significant. The most accurate regression model excluding Model 5 among the four models was Model 4 which includes cities of all sizes, followed by Model 7. 
+
+Model 3 and 4 are the most accurate model in each of the groups. However, as can be seen in Table \@ref(tab:tab6) and \@ref(tab:tab7), all the models have an extremely low R-squared value, which is very close to 0. In other words, the accuracy of the regression models is intensively low because the residuals (the difference between the measured values and the predicted values of the models) are high. Thus, it is hard to say that those six variables (Gender, Age, CityPopulation, Income, MonthsProgramming, and SchoolDegree) have a significant effect on education costs of beginner programmers to learn to code.
+
 ```{r tabLinRegModel2, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
 #### Linear regression models (Group 2) ####
 dfSmCity <-
@@ -342,7 +350,7 @@ RMSE <- function(error) {
 ```
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r tab6, echo=FALSE, warning=FALSE, message=FALSE}
 
 ### Calculate R-squared, MSE, and RMSE for each model 
 vecModel <-
@@ -372,7 +380,7 @@ dfModelValid
 # Model3 has the lowest RMSE among the 3 models => Model3 is the best!
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r tab7, echo=FALSE, warning=FALSE, message=FALSE}
 
 ### Calculate R-squared, MSE, and RMSE for each model
 vecModel_city <-
@@ -430,13 +438,13 @@ multicolDiagno <- function(mode, title) {
 }
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r tab8, echo=FALSE, warning=FALSE, message=FALSE}
 #### Multicollinearity diagnostics for Model (2) ####
 multicolDiagno(multiReg2, "Results of multicollinearity diagnostic metrics for Model (2)")
 ```
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r tab9, echo=FALSE, warning=FALSE, message=FALSE}
 #### Multicollinearity diagnostics for Model (3) ####
 multicolDiagno(multiReg3, "Results of multicollinearity diagnostic metrics for Model (3)")
 ```
