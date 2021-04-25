@@ -201,8 +201,30 @@ Y \sim \beta_0 + \beta_1X_1 + \beta_2X_2 + \beta_3X_3 + \beta_4X_4 + \beta_5X_5 
 
 As explained in the Data section, categorical variables were converted to continuous variables for the linear regression models. For example, the SchoolDegree variable (the level of education) was a categorical variable with character values. So, I converted the variable into a variable with numeric values, using the `dplyr` package. A complete list of survey questions and response options for each question can be found in the Appendix. Since the MoneyForLearning variable (the level of education) was not only categorical but also ordered and ranked in the original dataset, I converted the variable into a variable with numeric values. Also, I merged some of the response options of the variable. For instance, it is somewhat hard to say that a high school diploma or equivalent (GED) is higher than trade, technical, or vocational training, and a professional degree, such as MBA, MD, or JD, is higher than a non-professional master's degree. So, I merged the options, using the `recode` function of the `dplyr` package [@cityDplyr].
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
-#### Multiple regression analysis ####
+## Model Validation
+
+I will use Mean Square Error (MSE) and Root Mean Square Error (RMSE) to evaluate the accuracy of the model. As the name implies, MSE is defined as the mean of the square of the residuals obtained from a regression model, and RMSE is the square root of MSE [@citeHolmes]. I will use the residuals which are the results of the `lm` function to calculate MSE and RMSE of the models. Firstly, I will calculate the square of the residuals, and then computed the mean of the squared value for MSE (see Equation \@ref(eq:mse)). Secondly, for RMSE, I will use the `sqrt` function to calculate the square root of MSE (see Equation \@ref(eq:rmse)). Once I obtain the results of MSE and RMSE, I will compare them to see how accurately the models predict the response.
+
+\begin{equation}
+(\#eq:mse)
+MSE = \frac{1}{N}\sum_{i=1}^{N} (residual_{i})^2
+\end{equation}
+
+\begin{equation}
+(\#eq:rmse)
+RMSE = \sqrt{\frac{1}{N}\sum_{i=1}^{N} (residual_{i})^2}
+\end{equation}
+
+Since two multiple linear regression models (Model 2 and 3) are used in the first group of regression models, I will check if multicollinearity exists in these regression models, using variance inflation factor (VIF) and tolerance. I will use the `car` package to calculate the values of VIF and tolerance for each model [@citeCar]. Also, I will identify how much each of the independent variables affects the dependent variable with the standardized regression coefficients (beta). the `QuantPsyc` package will be used to compute the beta value [@citeQuanPsy].
+
+# Results
+
+## Results of Regression Model
+
+All the regression models in the first group of the models had p-values of F-statistic lower than a significance level of 0.05 (see Table 4). And, each of the independent variables also had a p-value of less than 0.05 except for the SchoolDegree variable in Model 3. This can be interpreted that all the independent variables excluding the SchoolDegree variable have an impact on the response variable (MoneyForLearning), and the level of education (SchoolDegree) is not statistically significant on the response variable with holding all other variables. However, the SchoolDegree variable becomes statistically significant if the Gender and Age variables are excluded from the regression model.
+
+```{r tabLinRegModel1, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+#### Linear regression models (Group 1) ####
 
 ### Run linear regression models
 multiReg1 <- lm(formula = 
@@ -242,8 +264,10 @@ stargazer::stargazer(multiReg1, multiReg2, multiReg3,
           model.numbers = FALSE)
 ```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
-#### Multiple regression analysis (by city population) ####
+The second group of regression models to examine the effects of the population of the city where the programmers reside shows that all the models have statistically significant p-values of F-statistic except for Model 5, the model for the small city with less than 100,000 residents (see Table 5). In other words, beginner programmers' income affects the cost of their education to learn code; however, their income does not affect the cost when the model contains only observations from the small city.
+
+```{r tabLinRegModel2, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+#### Linear regression models (Group 2) ####
 dfSmCity <-
   dfNewCoders %>%
   filter(CityPopulation == 0)
@@ -289,29 +313,6 @@ stargazer::stargazer(linReg1, linReg2, linReg3, linReg4,
 
 ```
 
-
-
-## Model Validation
-
-I will use Mean Square Error (MSE) and Root Mean Square Error (RMSE) to evaluate the accuracy of the model. As the name implies, MSE is defined as the mean of the square of the residuals obtained from a regression model, and RMSE is the square root of MSE [@citeHolmes]. I will use the residuals which are the results of the `lm` function to calculate MSE and RMSE of the models. Firstly, I will calculate the square of the residuals, and then computed the mean of the squared value for MSE (see Equation \@ref(eq:mse)). Secondly, for RMSE, I will use the `sqrt` function to calculate the square root of MSE (see Equation \@ref(eq:rmse)). Once I obtain the results of MSE and RMSE, I will compare them to see how accurately the models predict the response.
-
-\begin{equation}
-(\#eq:mse)
-MSE = \frac{1}{N}\sum_{i=1}^{N} (residual_{i})^2
-\end{equation}
-
-\begin{equation}
-(\#eq:rmse)
-RMSE = \sqrt{\frac{1}{N}\sum_{i=1}^{N} (residual_{i})^2}
-\end{equation}
-
-Since two multiple linear regression models (Model 2 and 3) are used in the first group of regression models, I will check if multicollinearity exists in these regression models, using variance inflation factor (VIF) and tolerance. I will use the `car` package to calculate the value of VIF and tolerance for each model [@citeCar]. Also, I will identify how much each of the independent variables affects the dependent variable with the standardized regression coefficients (beta). the `QuantPsyc` package will be used to compute the beta value [@citeQuanPsy].
-
-# Results
-```{r, include=FALSE}
-#### Beta ####
-# TODO: create a bar plot to show which variable affects the most with Beta
-```
 
 
 
