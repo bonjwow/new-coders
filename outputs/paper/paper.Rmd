@@ -322,7 +322,6 @@ Table \@ref(tab:tab7) is the results of MSE and RMSE of the second group consist
 
 Model 3 and 4 are the most accurate model in each of the groups. However, as can be seen in Table \@ref(tab:tab6) and \@ref(tab:tab7), all the models have an extremely low R-squared value, which is very close to 0. In other words, the accuracy of the regression models is intensively low because the residuals (the difference between the measured values and the predicted values of the models) are high. Thus, it is hard to say that those six variables (Gender, Age, CityPopulation, Income, MonthsProgramming, and SchoolDegree) have a significant effect on education costs of beginner programmers to learn to code.
 
-
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #### RMSE with custom function ####
 
@@ -403,7 +402,9 @@ dfModelValidCity
 ```
 
 
-Table \@ref(tab:tab8) is the results of multicollinearity diagnostic metrics for Model (2).
+Table \@ref(tab:tab8) is the results of the multicollinearity diagnostic test for Model (2). The results show that the MonthsProgramming variable has the highest beta value, which means the independent variable has the most significant effect on the dependent variable (MoneyForLearning) among those four independent variables included in the regression model. However, all the beta values of the independent variables are extremely low and close to 0, meaning that their effects are not significant. All the VIF and tolerance of each variable are very close to 1, which means there is almost no multicollinearity; a VIF of 10 or higher, or tolerance close 0 indicates that the model might have multicollinearity [@citeWilliams]. 
+
+Table \@ref(tab:tab9) is the results of the multicollinearity diagnostic test for Model (3). The variable which has the highest beta value is the CityPopulation variable, which means the size of the city has the most significant effect on education costs of beginner programmers to learn to code among those six independent variables used in the regression model. Like the results of the test for Model (2), Model (3) also does not have significant multicollinearity; the VIF and tolerance of each variable of the model are in an acceptable range. In concussion, there is no significant multicollinearity found in both Model (2) and (3). However, all the regression models have an extremely low R-squared value, meaning the regression models have poor accuracy of prediction. 
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
