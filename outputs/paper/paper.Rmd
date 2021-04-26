@@ -2,7 +2,7 @@
 title: "What Makes New Coders Spend More Money"
 subtitle: "The Factors Affecting Beginner Programmers' Expenses to Learn to Code"
 author: "Bongju Yoo"
-thanks: "Code and data are available at: [https://github.com/bonjwow/new-coders]"
+thanks: "Code and data are available at: [github.com/bonjwow/new-coders](https://github.com/bonjwow/new-coders)."
 date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "I examine potential factors that may affect education costs of new coders to learn to code aside from their post secondary education based on the responses of the online survey run by freeCodeCamp in 2017. I use a correlation matrix and linear regression models to see if there is a correlation and causal relationship between the potential factors and the costs of learning to code. The results of the analysis show that a commuting time to work and the level of education do not affect educational expenditure of new coders to learn to code. It is also found that there is a correlation between each of the independent variables and the dependent variable, excluding a commuting time; however, there is no significant causal relationship between the variables. \\par \\textbf{Keywords:} Programmers, Coder, Education Costs, Coding, Online education, Open education"
 output:
@@ -16,17 +16,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
 library(dplyr)
-library(janitor)
 library(stargazer)
-library(psych)
 # install.packages("here")
 library(here)
 # install.packages("QuantPsyc")
 library(QuantPsyc)
 library(car)
 library(kableExtra)
-# install.packages("forecast")
-library(forecast)
 ```
 
 

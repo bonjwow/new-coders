@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  26 APR 2021 17:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  26 APR 2021 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -821,7 +821,7 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 Here is how much of TeX's memory you used:
  12006 strings out of 480971
  175572 string characters out of 5905910
- 508901 words of memory out of 5000000
+ 508927 words of memory out of 5000000
  28866 multiletter control sequences out of 15000+600000
  477763 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -855,7 +855,7 @@ developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:
 onts/type1/public/lm/lmsy5.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texm
 f-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users/developer/AppData/Roaming/Tiny
 TeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on paper.pdf (11 pages, 377246 bytes).
+Output written on paper.pdf (11 pages, 377046 bytes).
 PDF statistics:
  359 PDF objects out of 1000 (max. 8388607)
  322 compressed objects within 4 object streams
