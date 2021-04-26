@@ -160,8 +160,6 @@ tblCorr
 ```
 
 
-
-
 # Model
 ```{r, include=FALSE}
 #### TODO's ####
@@ -518,6 +516,9 @@ Q. [SchoolDegree] What's the highest degree or level of school you have complete
   8. master's degree (non-professional)
   9. professional degree (MBA, MD, JD, etc.)
   10. Ph.D.
+  
+## Software Used {-}
+This paper is written in Rmarkdown [@citeRmarkdown] and `bookdown` [@citeBookdown], and printed by the `knitr` package [@citeKnitr]. The `here` package was used to set the path to the project folder [@citeHere]. And, the `kableExtra` [@citeKable] and `stargazer` [@citeStargazer] packages were used to crate tables.
 
 \newpage
 
