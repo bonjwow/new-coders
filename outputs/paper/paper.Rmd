@@ -447,13 +447,16 @@ multicolDiagno(multiReg2, "Results of multicollinearity diagnostic metrics for M
 multicolDiagno(multiReg3, "Results of multicollinearity diagnostic metrics for Model (3)")
 ```
 
+\newpage
 
 # Discussion
-```{r, include=FALSE}
-#### TODO's ####
-# Write at least 2.5 pages for the Discussion section
-# Weaknesses and next steps
-```
+
+## Summary
+In this paper, I examine potential factors that may affect costs of beginner programmers to learn to code aside from post secondary education based on the online survey run by freeCodeCamp in 2017. Firstly, I chose eight variables, including the dependent variable (educational expenses of the programmers) from the original dataset. Secondly, I ran a correlation matrix for all the independent variables to examine how closely they are related with the dependent variable. Thirdly, I used linear regression models to determine influence factors on the dependent variable from the independent variables excluding a commuting time which was confirmed not to have the correlation with the dependent variable. Fourthly, I ran two groups of linear regression models to examine effects of the dependent variables on the dependent variable: the first group was for identifying how programmers’ income affects their educational costs to learn to code and the second group was for looking into how the effect of their income changes according to the population of the city where the programmers live in. Finally, I evaluated the models using R-squared, MSE and RMSE scores of each model. Also, I used beta, VIF, and tolerance scores to check if there is multicollinearity in the multiple linear regression models. 
+
+Summary of the findings are as follows: (1) The statistical relationship exists between all the independent variables excluding a commuting time and new coders’ expenses to learn to code aside from their college or university tuition, (2) The level of education is not statistically significant on the new coders’ expenses to learn to code, (3) Their income is statistically significant on the costs; but, the prediction model can become less accurate if the model includes only response data of the programmers from the small city, (4) There is no multicollinearity found in the multiple linear regression models, and lastly (5) All the models used in this paper have an extremely low R-squared score, which means that it is difficult to argue that those selected independent variable significantly affect the independent variable. In short, it can be argued that there is a correlation between each of the independent variables (the level of education, the size of city, a commuting time, income, and learning time) and the dependent variable (the cost of learning to code); however, there is no significant causal relationship between the variables.
+
+## Casuality
 
 
 \newpage
