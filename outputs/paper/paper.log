@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  25 APR 2021 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  25 APR 2021 23:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,20 +788,20 @@ l.401 \newpage
                                                   
 l.401 \newpage
               ] [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 581--583
+Underfull \hbox (badness 10000) in paragraph at lines 583--585
 []$\T1/lmr/m/n/10 https : / / www . techrepublic . com / article / the -[] econ
 omic -[] outlook -[] is -[] uncertain -[] so -[] more -[] people -[] want -[] t
 o -[] become -[]
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 584--586
+Underfull \hbox (badness 1546) in paragraph at lines 586--588
 [][]\T1/lmr/m/n/10 Larson, Quincy. 2017. \T1/lmr/m/it/10 We're Build-ing a Mas-
 sive Pub-lic Dataset About New Coders\T1/lmr/m/n/10 . []$https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--586
+Underfull \hbox (badness 10000) in paragraph at lines 586--588
 \T1/lmr/m/n/10 / / www . freecodecamp . org / news / take -[] the -[] 2017 -[] 
 new -[] coder -[] survey -[] and -[] help -[] us -[] build -[] a -[] massive -[
 ] public -[]
@@ -849,7 +849,7 @@ y10.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publ
 ic/lm/lmsy5.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/lm/lmsy7.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/
 fonts/type1/public/lm/lmtt10.pfb>
-Output written on paper.pdf (11 pages, 324354 bytes).
+Output written on paper.pdf (11 pages, 325153 bytes).
 PDF statistics:
  351 PDF objects out of 1000 (max. 8388607)
  316 compressed objects within 4 object streams
