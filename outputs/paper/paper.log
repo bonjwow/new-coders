@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  26 APR 2021 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.23)  26 APR 2021 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -732,15 +732,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 99.
-[1
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+12.
+(c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [1
 
 {c:/Users/developer/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/p
 dftex.map}]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-22.
-(c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 122.
 [2] [3pdfTeX warning (ext4): destination with the same identifier (name{table.1
@@ -765,47 +764,47 @@ xt4): destination with the same identifier (name{table.4}) has been already use
 d, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.340 
+l.342 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.340 
+l.342 
       ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
 le.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.406 \newpage
+l.408 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.406 \newpage
+l.408 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.406 \newpage
+l.408 \newpage
               ] [8pdfTeX warning (ext4): destination with the same identifier (
 name{table.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.423 \newpage
+l.425 \newpage
               ] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 600--602
+Underfull \hbox (badness 10000) in paragraph at lines 643--645
 []$\T1/lmr/m/n/10 https : / / www . techrepublic . com / article / the -[] econ
 omic -[] outlook -[] is -[] uncertain -[] so -[] more -[] people -[] want -[] t
 o -[] become -[]
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 603--605
+Underfull \hbox (badness 1546) in paragraph at lines 646--648
 [][]\T1/lmr/m/n/10 Larson, Quincy. 2017. \T1/lmr/m/it/10 We're Build-ing a Mas-
 sive Pub-lic Dataset About New Coders\T1/lmr/m/n/10 . []$https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 603--605
+Underfull \hbox (badness 10000) in paragraph at lines 646--648
 \T1/lmr/m/n/10 / / www . freecodecamp . org / news / take -[] the -[] 2017 -[] 
 new -[] coder -[] survey -[] and -[] help -[] us -[] build -[] a -[] massive -[
 ] public -[]
@@ -816,16 +815,16 @@ new -[] coder -[] survey -[] and -[] help -[] us -[] build -[] a -[] massive -[
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 86D894795163340D9CF96F2ED41CB710;2336.
+(rerunfilecheck)             Checksum: F6BE0A0FD2AFAFC3DD4E973E3C968AF1;2671.
  ) 
 Here is how much of TeX's memory you used:
- 12015 strings out of 480971
- 175697 string characters out of 5905910
- 508967 words of memory out of 5000000
- 28868 multiletter control sequences out of 15000+600000
+ 12021 strings out of 480971
+ 175837 string characters out of 5905910
+ 509046 words of memory out of 5000000
+ 28870 multiletter control sequences out of 15000+600000
  477763 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,17n,74p,1531b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,17n,74p,1532b,388s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-
 ts1.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/
 lm/lm-mathit.enc}{c:/Users/developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/e
@@ -855,10 +854,10 @@ developer/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:
 onts/type1/public/lm/lmsy5.pfb><c:/Users/developer/AppData/Roaming/TinyTeX/texm
 f-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users/developer/AppData/Roaming/Tiny
 TeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on paper.pdf (11 pages, 381457 bytes).
+Output written on paper.pdf (11 pages, 386701 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 106 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 388 PDF objects out of 1000 (max. 8388607)
+ 351 compressed objects within 4 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
