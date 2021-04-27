@@ -481,6 +481,7 @@ print(evaluationMetrics::MSE(linRegIris, decimal=3))
 ### Calculate RMSE
 print(evaluationMetrics::RMSE(linRegIris, decimal=3))
 ```
+The code is available at: [github.com/bonjwow/evaluation-metrics](https://github.com/bonjwow/evaluation-metrics).
 
 ## Survey Questions {-}
 
